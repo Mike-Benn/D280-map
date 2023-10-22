@@ -9,3 +9,8 @@ svg {
     justify-content: space-between;
     flex-direction: row;
 }
+
+path:hover {
+    fill: blue;
+    transition: fill 0.6s;
+}
