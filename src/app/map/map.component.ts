@@ -6,5 +6,16 @@ import { Component } from '@angular/core';
   styleUrls: ['./map.component.scss']
 })
 export class MapComponent {
+  
+  getPathId(event: MouseEvent , pathId: string) : string {
+    console.log(`${pathId}`)
+    return pathId;
+    
+  }
+
+
+ 
+
+
 
 }
