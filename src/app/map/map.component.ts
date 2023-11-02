@@ -7,12 +7,12 @@ import { Component } from '@angular/core';
 })
 export class MapComponent {
   
-  getPathId(event: MouseEvent , pathId: string) : string {
-    console.log(`${pathId}`)
-    return pathId;
-    
+  getPathId(pathId: string) : string {
+    console.log(`${pathId}`);
+    return pathId; 
   }
 
+  
 
  
 
