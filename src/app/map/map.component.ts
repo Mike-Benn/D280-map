@@ -9,7 +9,7 @@ import { MapService } from '../services/map.service';
 export class MapComponent {
   
   mapService = new MapService();
-  id = ''
+  id = '';
   
   
 
