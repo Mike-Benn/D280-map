@@ -1,6 +1,15 @@
+import { Injectable } from '@angular/core';
+
+@Injectable({
+    providedIn: 'root',
+})
+
 export class MapService {
+
+    public id = '';
+
     onCountryClick(pathId: string) {
-        console.log(pathId);
-        return pathId;
+        this.id = pathId;
+        console.log(this.id);
     }
 }
