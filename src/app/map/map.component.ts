@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { MapService } from '../services/map.service';
 
 @Component({
   selector: 'app-map',
@@ -7,10 +8,10 @@ import { Component } from '@angular/core';
 })
 export class MapComponent {
   
-  getPathId(pathId: string) : string {
-    console.log(`${pathId}`);
-    return pathId; 
-  }
+  mapService = new MapService();
+  id = ''
+  
+  
 
   
 
