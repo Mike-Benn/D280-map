@@ -7,9 +7,13 @@ import { MapService } from '../services/map.service';
   styleUrls: ['./map.component.scss']
 })
 export class MapComponent {
+  constructor(private mapService: MapService) {}
   
-  mapService = new MapService();
-  id = '';
+  onMouseClick(id: string) {
+    this.mapService.onCountryClick(id);
+  }
+  
+ 
   
   
 
