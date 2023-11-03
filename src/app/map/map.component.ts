@@ -9,7 +9,7 @@ import { HttpClient } from '@angular/common/http';
   providers: [MapService]
 
 })
-export class MapComponent implements OnInit {
+export class MapComponent {
   
   constructor(private mapService: MapService , private http: HttpClient) {}
 
@@ -21,26 +21,26 @@ export class MapComponent implements OnInit {
   longitude: string = '';
   url: string = `http://api.worldbank.org/v2/country/${this.mapService.id}?format=json`;
 
-  ngOnInit(){
-    this.fetchCountry();
-  }
+  
 
-  private fetchCountry() {
-    this.http.get(`http://api.worldbank.org/v2/country/us?format=json`)
+  public fetchCountry() {
+    this.http.get(this.url)
     .subscribe((result: any) => {
-      let res: {adminregion: object, capitalCity: string, id: string, incomeLevel: {id: string, iso2code: string, value: string}, iso2Code: string, latitude: string, lendingType: object, longitude: string, name: string, region: string} = (result[1])[0];
+      let res: {adminregion: object, capitalCity: string, id: string, incomeLevel: {id: string, iso2code: string, value: string}, iso2Code: string, latitude: string, lendingType: object, longitude: string, name: string, region: {id: string, iso2code: string, value: string}} = (result[1])[0];
       this.countryName = res.name;
       this.capital = res.capitalCity;
-      this.region = res.region;
+      this.region = res.region.value;
       this.incomeLevel = res.incomeLevel.value
       this.latitude = res.latitude
       this.longitude = res.longitude;
-      console.log(this.incomeLevel);
+      console.log(this.region);
     })
   }
 
   onMouseClick(id: string) {
     this.mapService.onCountryClick(id);
+    this.url = `http://api.worldbank.org/v2/country/${id}?format=json`;
+    this.fetchCountry();
   }
   
   
