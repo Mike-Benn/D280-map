@@ -10,6 +10,13 @@ import { MapService } from '../services/map.service';
 })
 export class MapComponent {
   constructor(private mapService: MapService) {}
+
+  countryName: string = '';
+  capital: string = '';
+  region: string = '';
+  incomeLevel: string = '';
+  longitude: string = '';
+  latitude: string = '';
   
   onMouseClick(id: string) {
     this.mapService.onCountryClick(id);
