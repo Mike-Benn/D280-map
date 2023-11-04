@@ -510,13 +510,13 @@
             name="Zimbabwe" id="zw" (click)="onMouseClick('zw')"/>
       </svg>
       <div class="country-info">
-            <h3>{{ countryName }}</h3>
+            <p class="country-name"><span class="info-header">Country Name:</span> {{ countryName }}</p>
             <ul>
-                  <li>{{ capital }}</li>
-                  <li>{{ region }}</li>
-                  <li>{{ incomeLevel }}</li>
-                  <li>{{ latitude }}</li>
-                  <li>{{ longitude }}</li>
+                  <li><span class="info-header">Capital:</span>  {{ capital }}</li>
+                  <li><span class="info-header">Region:</span> {{ region }}</li>
+                  <li><span class="info-header">Income Level:</span> {{ incomeLevel }}</li>
+                  <li><span class="info-header">Latitude:</span> {{ latitude }}</li>
+                  <li><span class="info-header">Longitude:</span> {{ longitude }}</li>
             </ul>
       </div>
 </div>
