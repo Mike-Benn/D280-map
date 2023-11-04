@@ -21,8 +21,6 @@ export class MapComponent {
   longitude: string = '';
   url: string = `http://api.worldbank.org/v2/country/${this.mapService.id}?format=json`;
 
-  
-
   public fetchCountry() {
     this.http.get(this.url)
     .subscribe((result: any) => {
@@ -42,16 +40,4 @@ export class MapComponent {
     this.url = `http://api.worldbank.org/v2/country/${id}?format=json`;
     this.fetchCountry();
   }
-  
-  
- 
-  
-  
-
-  
-
- 
-
-
-
 }
