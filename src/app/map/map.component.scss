@@ -1,6 +1,9 @@
 svg {
-    width: 80%;
-    height: 80%;
+    width: auto;
+    height: 600px;
+    margin-top: 17px;
+    margin-left: 17px;
+    
     
 }
 
@@ -16,6 +19,21 @@ path:hover {
 }
 
 .country-info {
-    
+    flex-shrink: 0;
     background-color:blanchedalmond;
+    width: 350px;
+    height: 170px;
+    padding: 15px;
+    margin-left: 100px;
+    padding-left: 30px;
 }
+
+.country-name {
+    font-size: 19px;
+}
+
+.info-header {
+    font-weight: bold;
+    text-decoration: underline;
+}
+
